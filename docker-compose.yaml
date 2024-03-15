@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  db:
+    image: 'postgres'
+    restart: 'always'
+    ports:
+      - '60321:5432'
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: 'Atenea#99'
+      POSTGRES_DB: 'bioscop'
